@@ -56,7 +56,7 @@ lab_4 = Label(top_win, text="Equal money Euro to assigned currency: ",
 # definning entry fields and get method for Button "Calculate"
 
 
-# XXX
+
 
 
 def calculate_amount():
