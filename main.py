@@ -11,14 +11,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 
 
-
 # Run headless Chrome window-scrapping in background
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
 PATH = "/home/laki/Documents/chromedriver"
 
-# 
+#
 
 driver = webdriver.Chrome(PATH, options=options)
 driver.get("https://www.011info.com/kursna-lista")
@@ -39,12 +38,13 @@ for i in range(len(xpath_list)):
     value_list.append(finded)
 
 
-
 # defining main frame top level window
 
 top_win = Tk()
 top_win.geometry("600x600")
 top_win.title("Currency changer ")
+
+
 # show current date used for daily curency urency course
 present_time = datetime.datetime.now().strftime("%x")
 
