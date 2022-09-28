@@ -38,6 +38,7 @@ for i in range(len(xpath_list)):
     value_list.append(finded)
 
 
+
 # defining main frame top level window
 
 top_win = Tk()
@@ -48,13 +49,32 @@ top_win.title("Currency changer ")
 # show current date used for daily curency urency course
 present_time = datetime.datetime.now().strftime("%x")
 
-# creating labels for curency changer App
 
+
+# creating labels for curency changer App
 
 def chosen_currency(chosen):
     chosen = variable.get()
     lab_1 = Label(top_win, text=f"{present_time} \n Today's {chosen} course : ",
                   bg="lightblue", height=2, width=30).place(x=5, y=5)
+    if chosen == "EUR":
+        lab_2 = Label(top_win, text=f"{value_list[0]}",
+                      height=2, width=20).place(x=260, y=5)
+        print(type(text))
+    elif chosen == "AUD":
+        lab_2 = Label(top_win, text=f"{value_list[1]}",
+                      height=2, width=20).place(x=260, y=5)
+
+    elif chosen == "CAD":
+        lab_2 = Label(top_win, text=f"{value_list[2]}",
+                      height=2, width=20).place(x=260, y=5)
+
+    elif chosen == "DKK":
+        lab_2 = Label(top_win, text=f"{value_list[3]}",
+                      height=2, width=20).place(x=260, y=5)
+
+    else:
+        pass
 
 
 variable = StringVar(top_win)
@@ -65,8 +85,6 @@ opt_menu = OptionMenu(top_win, variable, "EUR", "AUD",
                       "CAD", "DKK", command=chosen_currency)
 opt_menu.place(x=300, y=70)
 
-lab_2 = Label(top_win, text="replaceble text",
-              height=2, width=20).place(x=260, y=5)
 
 lab_3 = Label(top_win, text="Currency: ", width=30,
               height=2, bg="red").place(x=5, y=70)
@@ -80,9 +98,6 @@ lab_5 = Label(top_win, text="Amount Rsd to assigned currency: ",
 
 
 # definning entry fields and get method for Button "Calculate"
-
-
-# XXX
 
 
 def calculate_amount():
