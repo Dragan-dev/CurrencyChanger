@@ -82,6 +82,9 @@ lab_5 = Label(top_win, text="Amount Rsd to assigned currency: ",
 # definning entry fields and get method for Button "Calculate"
 
 
+# XXX
+
+
 def calculate_amount():
     entered_value = amount_entry.get()
     int(entered_value)
